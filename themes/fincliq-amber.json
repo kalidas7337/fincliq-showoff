@@ -1,0 +1,23 @@
+{
+  "name": "FINCLIQ Amber",
+  "background": "#17100A",
+  "foreground": "#FFF0D2",
+  "cursorColor": "#FFCB6B",
+  "selectionBackground": "#334155",
+  "black": "#17100A",
+  "red": "#FF7777",
+  "green": "#70F0B4",
+  "yellow": "#FFE08A",
+  "blue": "#FF9966",
+  "purple": "#78DECF",
+  "cyan": "#54DCFF",
+  "white": "#FFF0D2",
+  "brightBlack": "#B79B7A",
+  "brightRed": "#FF7777",
+  "brightGreen": "#39FF88",
+  "brightYellow": "#C0AAFF",
+  "brightBlue": "#FF9966",
+  "brightPurple": "#78DECF",
+  "brightCyan": "#9AF5FF",
+  "brightWhite": "#FFFFFF"
+}

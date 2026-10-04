@@ -1,0 +1,9 @@
+node_modules/
+*.tgz
+*.log
+private/
+.env
+.env.*
+.github-check/
+.install-check*/
+.e2e-check*/

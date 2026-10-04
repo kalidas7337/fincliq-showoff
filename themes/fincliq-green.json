@@ -1,0 +1,23 @@
+{
+  "name": "FINCLIQ Green",
+  "background": "#07110B",
+  "foreground": "#C8F7D4",
+  "cursorColor": "#39FF88",
+  "selectionBackground": "#334155",
+  "black": "#07110B",
+  "red": "#FF6B6B",
+  "green": "#70F0B4",
+  "yellow": "#FFD166",
+  "blue": "#54DCFF",
+  "purple": "#C49BFF",
+  "cyan": "#54DCFF",
+  "white": "#C8F7D4",
+  "brightBlack": "#7BBF91",
+  "brightRed": "#FF6B6B",
+  "brightGreen": "#39FF88",
+  "brightYellow": "#FFD166",
+  "brightBlue": "#54DCFF",
+  "brightPurple": "#C49BFF",
+  "brightCyan": "#9AF5FF",
+  "brightWhite": "#FFFFFF"
+}

@@ -1,0 +1,23 @@
+{
+  "name": "fincliq-showoff",
+  "version": "0.3.1",
+  "description": "Centered animated ASCII branding, multicolor palettes and display-only terminal sessions.",
+  "type": "module",
+  "license": "MIT",
+  "repository": { "type": "git", "url": "https://github.com/kalidas7337/fincliq-showoff.git" },
+  "homepage": "https://github.com/kalidas7337/fincliq-showoff#readme",
+  "bugs": { "url": "https://github.com/kalidas7337/fincliq-showoff/issues" },
+  "engines": { "node": ">=20" },
+  "bin": { "showoff": "bin/showoff.js" },
+  "exports": "./src/display.js",
+  "files": ["bin", "src", "themes", "README.md", "LICENSE"],
+  "scripts": {
+    "start": "node bin/showoff.js session",
+    "demo": "node bin/showoff.js demo",
+    "banner": "node bin/showoff.js banner",
+    "gallery": "node bin/showoff.js gallery",
+    "showcase": "node bin/showoff.js showcase",
+    "test": "node --test"
+  },
+  "keywords": ["terminal", "ascii", "branding", "windows", "display"]
+}

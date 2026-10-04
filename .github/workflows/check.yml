@@ -1,0 +1,45 @@
+name: Windows toolkit checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  windows:
+    runs-on: windows-latest
+    strategy:
+      matrix:
+        node: [20, 22]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - name: Verify rendering and shell handoff behavior
+        run: npm.cmd test
+      - name: Install, run and uninstall from the public GitHub source archive
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $prefix = Join-Path $env:RUNNER_TEMP 'fincliq-install'
+          $cache = Join-Path $env:RUNNER_TEMP 'fincliq-cache'
+          $archive = 'https://github.com/${{ github.repository }}/archive/${{ github.sha }}.tar.gz'
+          npm.cmd install --global --prefix "$prefix" --cache "$cache" "$archive"
+          if ($LASTEXITCODE -ne 0) { throw 'GitHub installation failed.' }
+          $cli = Join-Path $prefix 'showoff.cmd'
+          & $cli --version
+          if ($LASTEXITCODE -ne 0) { throw 'Installed CLI failed.' }
+          & $cli demo --plain
+          if ($LASTEXITCODE -ne 0) { throw 'Installed demo failed.' }
+          npm.cmd exec --yes --cache "$cache" --package "$archive" -- showoff banner --plain
+          if ($LASTEXITCODE -ne 0) { throw 'Quick-run failed.' }
+          npm.cmd uninstall --global --prefix "$prefix" --cache "$cache" fincliq-showoff
+          if ($LASTEXITCODE -ne 0) { throw 'Uninstallation failed.' }
+          if (Test-Path -LiteralPath $cli) { throw 'Command shim was not removed.' }
+          if (Test-Path -LiteralPath (Join-Path $prefix 'node_modules/fincliq-showoff')) {
+            throw 'Installed package was not removed.'
+          }

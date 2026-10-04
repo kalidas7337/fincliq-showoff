@@ -1,0 +1,23 @@
+{
+  "name": "FINCLIQ Neon",
+  "background": "#120B1C",
+  "foreground": "#F2E8FF",
+  "cursorColor": "#FF70DB",
+  "selectionBackground": "#334155",
+  "black": "#120B1C",
+  "red": "#FF7373",
+  "green": "#70F0B4",
+  "yellow": "#FFCF70",
+  "blue": "#70EAFF",
+  "purple": "#C0FF77",
+  "cyan": "#54DCFF",
+  "white": "#F2E8FF",
+  "brightBlack": "#AB90B8",
+  "brightRed": "#FF7373",
+  "brightGreen": "#39FF88",
+  "brightYellow": "#FFCF70",
+  "brightBlue": "#70EAFF",
+  "brightPurple": "#C0FF77",
+  "brightCyan": "#9AF5FF",
+  "brightWhite": "#FFFFFF"
+}

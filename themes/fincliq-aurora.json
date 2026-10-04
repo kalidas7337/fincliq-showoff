@@ -1,0 +1,23 @@
+{
+  "name": "FINCLIQ Aurora",
+  "background": "#0B1020",
+  "foreground": "#E2E8FF",
+  "cursorColor": "#58E1FF",
+  "selectionBackground": "#334155",
+  "black": "#0B1020",
+  "red": "#FF738D",
+  "green": "#70F0B4",
+  "yellow": "#FFD580",
+  "blue": "#AB91FF",
+  "purple": "#FF87C7",
+  "cyan": "#54DCFF",
+  "white": "#E2E8FF",
+  "brightBlack": "#8C9DBF",
+  "brightRed": "#FF738D",
+  "brightGreen": "#39FF88",
+  "brightYellow": "#70F0B4",
+  "brightBlue": "#AB91FF",
+  "brightPurple": "#FF87C7",
+  "brightCyan": "#9AF5FF",
+  "brightWhite": "#FFFFFF"
+}
